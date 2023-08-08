@@ -3,6 +3,7 @@ import ThreeGraces from "./components/threegraces";
 import Header from "./components/Header";
 import { useState } from "react";
 import Offer from "./components/Offer";
+import OfferMobile from "./components/OfferMobile";
 
 const sendContactForm = async (data: any) =>
   fetch("/api/mail", {
@@ -17,6 +18,7 @@ const sendContactForm = async (data: any) =>
 export default function Home() {
   const [currentScroll, setCurrentScroll] = useState(0);
   const [isContactOpen, setContactOpen] = useState(false);
+  const [isOfferOpen, setOfferOpen] = useState(false);
   const handleScroll = (event: any) => {
     const scrollAmount = event.deltaY;
     console.log(currentScroll);
@@ -51,10 +53,10 @@ export default function Home() {
           isContactOpen ? "z-[2000] opacity-100" : "z-[-1000] opacity-0"
         }`}
       >
-        <h1 className="text-3xl text-center">Kontakt</h1>
+        <h1 className="text-3xl text-center">Wypełnij potrzebne informacje</h1>
 
-        <div className="flex flex-col space-y-3 mt-6 lg:mt-12">
-          <div className="flex flex-col lg:flex-row lg:space-x-3">
+        <div className="flex flex-col space-y-3  mt-12">
+          <div className="flex flex-row space-x-3">
             <div className="flex flex-col">
               Imię{" "}
               <input
@@ -65,7 +67,7 @@ export default function Home() {
                 className="mt-2 text-black"
               />
             </div>
-            <div className="flex flex-col mt-3 lg:mt-0">
+            <div className="flex flex-col ">
               Email{" "}
               <input
                 onChange={(e) => setEmail(e.target.value)}
@@ -100,8 +102,9 @@ export default function Home() {
         </div>
       </div>
       <div className={`relative w-full h-full duration-1000 overflow-y-scroll`}>
+        {isOfferOpen && <OfferMobile />}
         <ThreeGraces />
-        <Header marginLeft={currentScroll} setContactOpen={setContactOpen} />
+        <Header marginLeft={currentScroll} setOfferOpen={setOfferOpen} />
         <div className=" ml-[12vw] relative overflow-x-hidden">
           <Offer scroll={currentScroll} setContactOpen={setContactOpen} />
         </div>

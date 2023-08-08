@@ -91,6 +91,9 @@ export default function Header({
           </div>
         </div>
         <div className="flex-row justify-center lg:justify-end lg:items-end flex text-left space-x-5 lg:space-x-8 lg:hidden">
+          <button className="text-2xl lg:text-2xl w-max expand caps">
+            Cennik
+          </button>
           <Link
             href="/oferta"
             className="text-2xl lg:text-2xl w-max expand caps"
