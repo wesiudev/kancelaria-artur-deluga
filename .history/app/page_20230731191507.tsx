@@ -1,0 +1,20 @@
+import Image from "next/image";
+import ThreeGraces from "./components/threegraces";
+import HorizontalScroll from "./components/HorizontalScroll";
+import Header from "./components/HorizontalScroll/Header";
+export default function Home() {
+  return (
+    <div className="absolute left-0 top-0 w-screen h-screen z-[1500] overflow-x-hidden">
+      <main className="relative w-full h-full">
+        <ThreeGraces />
+        <Header />
+        <div className="flex flex-col bottom-[10vh] left-[12vw] absolute">
+          <div>ul. Kościelna 15-17/7</div>
+          <div>86-300 Grudziądz</div>
+          <div>tel. 502 637 727</div>
+        </div>
+        <div className="h-screen w-full bg-white"></div>
+      </main>
+    </div>
+  );
+}
