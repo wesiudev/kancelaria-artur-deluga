@@ -16,6 +16,7 @@ export async function POST(request) {
     <h3 class="form-heading" align="left">Wiadomość</h3><p class="form-answer" align="left">${message}</p>
     </div></body></html>`,
   };
-
-  mail.send(msg);
+  if ((email, firstName, message)) {
+    mail.send(msg);
+  }
 }
