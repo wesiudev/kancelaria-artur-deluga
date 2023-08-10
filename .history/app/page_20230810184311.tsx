@@ -102,11 +102,11 @@ export default function Home() {
                 className="flex flex-col gap-6 justify-center items-center"
               >
                 <BsFillCheckCircleFill
-                  className={`text-green-500 w-20 h-20 duration-150 cursor-pointer ${
+                  className={`text-green-500 w-20 h-20 duration-150 ${
                     isSent ? "scale-100 opacity-100" : "scale-75 opacity-0"
                   }`}
                 />
-                <span className="text-white bg-green-500 rounded-md p-2 cursor-pointer">
+                <span className="text-white bg-green-500 rounded-md p-2">
                   Wiadomość wysłana pomyślnie
                 </span>
               </div>

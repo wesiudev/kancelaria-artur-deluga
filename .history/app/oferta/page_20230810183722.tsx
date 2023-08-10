@@ -22,8 +22,8 @@ export default function OfferMobile() {
   const [firstName, setFirstName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const [isSending, setSending] = useState<boolean>(false);
-  const [isSent, setIsSent] = useState<boolean>(false);
+  const [isSending, setSending] = useState<boolean>(true);
+  const [isSent, setIsSent] = useState<boolean>(true);
   useEffect(() => {
     AOS.init({
       offset: 100,
@@ -254,19 +254,11 @@ export default function OfferMobile() {
               </svg>
             )}
             {isSent && (
-              <div
-                onClick={() => setContactOpen(false)}
-                className="flex flex-col gap-6 justify-center items-center"
-              >
-                <BsFillCheckCircleFill
-                  className={`text-green-500 w-20 h-20 duration-150 ${
-                    isSent ? "scale-100 opacity-100" : "scale-75 opacity-0"
-                  }`}
-                />
-                <span className="text-white bg-green-500 rounded-md p-2">
-                  Wiadomość wysłana pomyślnie
-                </span>
-              </div>
+              <BsFillCheckCircleFill
+                className={`text-green-500 w-20 h-20 duration-150 ${
+                  !isSent ? "scale-100" : "scale-75"
+                }`}
+              />
             )}
           </div>
           <h1 className="text-3xl text-center">Kontakt</h1>
