@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
+export const dynamic = "auto";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -13,8 +13,6 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
   },
 };
-
-export const dynamic = "auto";
 
 export default function RootLayout({
   children,
