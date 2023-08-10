@@ -213,7 +213,7 @@ export default function OfferMobile() {
         </div>
       </div>
       <div
-        className={`text-white w-[80vw] fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-gradient-to-bl from-black to-zinc-800 lg:w-max h-max px-12 rounded-3xl py-6 duration-300 ${
+        className={`w-[80vw] fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-gradient-to-bl from-black to-zinc-800 lg:w-max h-max px-12 rounded-3xl py-6 duration-300 ${
           isContactOpen ? "z-[2000] opacity-100" : "z-[-1000] opacity-0"
         }`}
       >
@@ -242,11 +242,11 @@ export default function OfferMobile() {
             </div>
           </div>
           <div className="flex flex-col mt-2">
-            Treść wiadomości
+            Treść{" "}
             <textarea
               onChange={(e) => setMessage(e.target.value)}
               value={message}
-              className="h-full resize-none text-black mt-2"
+              className="h-full resize-none text-black"
             ></textarea>
           </div>
         </div>

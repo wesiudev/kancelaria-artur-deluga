@@ -2,8 +2,7 @@
 import Header from "./components/Header";
 import { useState } from "react";
 import Offer from "./components/Offer";
-import bg from "@/public/bg.jpg";
-import Image from "next/image";
+
 const sendContactForm = async (data: any) =>
   fetch("/api/mail", {
     method: "POST",
@@ -43,17 +42,9 @@ export default function Home() {
   return (
     <div
       onWheel={handleScroll}
-      className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white bg-white"
+      className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white bg-black"
     >
-      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[101vh] w-[101vw] rounded-3xl">
-        <Image
-          width={1248}
-          height={1248}
-          src={bg}
-          alt="Obraz w tle Radca Prawny Artur Deluga. Image by FreePik."
-          className="w-full h-full blur-sm"
-        />
-      </div>
+      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-gradient-to-bl from-black to-zinc-800 min-h-[90vh] min-w-[90vw] rounded-3xl"></div>
       <div
         className={`fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-gradient-to-bl from-black to-zinc-800 w-max h-max px-12 rounded-3xl py-6 duration-300 ${
           isContactOpen ? "z-[2000] opacity-100" : "z-[-1000] opacity-0"
@@ -107,7 +98,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className={`relative w-full h-full duration-1000 overflow-hidden`}>
+      <div className={`relative w-full h-full duration-1000 overflow-y-scroll`}>
         <Header marginLeft={currentScroll} setContactOpen={setContactOpen} />
         <div className=" ml-[12vw] relative overflow-x-hidden">
           <Offer scroll={currentScroll} setContactOpen={setContactOpen} />

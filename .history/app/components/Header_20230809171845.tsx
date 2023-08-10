@@ -40,7 +40,6 @@ export default function Header({
               <div>ul. Kościelna 15-17/7</div>
               <div>86-300 Grudziądz</div>
             </div>
-
             <div className="hidden lg:flex flex-row items-center text-center justify-center text-2xl lg:text-4xl my-6">
               <FaPhone className="" />
               <a
@@ -50,33 +49,16 @@ export default function Header({
                 +48502637727
               </a>
             </div>
-            <div className="flex-row justify-center space-y-12 lg:items-end flex text-left space-x-5 lg:space-x-8">
-              <Link
-                href="/oferta"
-                className="text-2xl lg:text-2xl w-max expand caps"
-              >
-                Zakres usług
-              </Link>
-              <button
-                onClick={() => setContactOpen(true)}
-                className="text-2xl lg:text-2xl w-max expand caps"
-              >
-                Kontakt
-              </button>
-            </div>
           </div>
         </div>
-        <div className="flex-row justify-center lg:justify-end lg:items-end flex text-left space-x-5 lg:space-x-8 lg:hidden">
+        <div className="flex-row justify-center lg:justify-end lg:items-end flex text-left space-x-5 lg:space-x-8">
           <Link
             href="/oferta"
             className="text-2xl lg:text-2xl w-max expand caps"
           >
             Zakres usług
           </Link>
-          <button
-            onClick={() => setContactOpen(true)}
-            className="text-2xl lg:text-2xl w-max expand caps"
-          >
+          <button className="text-2xl lg:text-2xl w-max expand caps">
             Kontakt
           </button>
         </div>

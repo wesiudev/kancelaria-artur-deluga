@@ -57,10 +57,7 @@ export default function Header({
               >
                 Zakres usług
               </Link>
-              <button
-                onClick={() => setContactOpen(true)}
-                className="text-2xl lg:text-2xl w-max expand caps"
-              >
+              <button className="text-2xl lg:text-2xl w-max expand caps">
                 Kontakt
               </button>
             </div>
@@ -73,10 +70,7 @@ export default function Header({
           >
             Zakres usług
           </Link>
-          <button
-            onClick={() => setContactOpen(true)}
-            className="text-2xl lg:text-2xl w-max expand caps"
-          >
+          <button className="text-2xl lg:text-2xl w-max expand caps">
             Kontakt
           </button>
         </div>

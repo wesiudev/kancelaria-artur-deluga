@@ -45,13 +45,13 @@ export default function Home() {
       onWheel={handleScroll}
       className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white bg-white"
     >
-      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[101vh] w-[101vw] rounded-3xl">
+      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-screen w-screen rounded-3xl">
         <Image
           width={1248}
           height={1248}
           src={bg}
           alt="Obraz w tle Radca Prawny Artur Deluga. Image by FreePik."
-          className="w-full h-full blur-sm"
+          className="w-full h-full"
         />
       </div>
       <div

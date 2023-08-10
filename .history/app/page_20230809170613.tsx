@@ -51,7 +51,7 @@ export default function Home() {
           height={1248}
           src={bg}
           alt="Obraz w tle Radca Prawny Artur Deluga. Image by FreePik."
-          className="w-full h-full blur-sm"
+          className="w-full h-full"
         />
       </div>
       <div

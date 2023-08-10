@@ -246,7 +246,7 @@ export default function OfferMobile() {
             <textarea
               onChange={(e) => setMessage(e.target.value)}
               value={message}
-              className="h-full resize-none text-black mt-2"
+              className="h-full resize-none text-black"
             ></textarea>
           </div>
         </div>

@@ -86,11 +86,7 @@ export default function OfferMobile() {
                 >
                   Oferowane usługi
                 </h1>
-                <div
-                  data-aos="fade-right"
-                  data-aos-delay="300"
-                  className="h-1 w-full mb-6 bg-green-600"
-                />
+                <div className="h-1 w-full mb-6 bg-green-600" />
               </div>
 
               <h2
@@ -111,7 +107,7 @@ export default function OfferMobile() {
           <div className="relative text-black flex flex-col space-y-12 mt-24">
             <div
               data-aos="fade-down"
-              data-aos-delay="400"
+              data-aos-delay="700"
               className="max-h-[50vh] border-0 hover:scale-105 duration-300 hover:bg-opacity-100 cursor-default  rounded-md bg-white  flex flex-col p-6 justify-between"
             >
               <h1 className="text-xl lg:text-3xl font-bold">Prawo Karne</h1>
@@ -126,7 +122,7 @@ export default function OfferMobile() {
             </div>
             <div
               data-aos="fade-down"
-              data-aos-delay="500"
+              data-aos-delay="900"
               className="max-h-[50vh] border-0 hover:scale-105 duration-300 hover:bg-opacity-100 cursor-default  rounded-md bg-white  flex flex-col justify-between p-6"
             >
               <h1 className="text-xl lg:text-3xl font-bold">
@@ -143,7 +139,7 @@ export default function OfferMobile() {
 
             <div
               data-aos="fade-down"
-              data-aos-delay="400"
+              data-aos-delay="1100"
               className="max-h-[50vh] border-0 hover:scale-105 duration-300 hover:bg-opacity-100 cursor-default rounded-md bg-white  flex flex-col p-6 justify-between"
             >
               <h1 className="text-xl lg:text-3xl font-bold">Prawo cywilne</h1>
@@ -157,7 +153,7 @@ export default function OfferMobile() {
             </div>
             <div
               data-aos="fade-down"
-              data-aos-delay="400"
+              data-aos-delay="1300"
               className="max-h-[50vh] border-0 hover:scale-105 duration-300 hover:bg-opacity-100 cursor-default rounded-md  bg-white  flex flex-col p-6 justify-between"
             >
               <h1 className="text-xl lg:text-3xl font-bold">Prawo Rodzinne</h1>
@@ -174,7 +170,7 @@ export default function OfferMobile() {
           </div>
           <div
             data-aos="fade-down"
-            data-aos-delay="400"
+            data-aos-delay="1500"
             className="text-white flex flex-col h-max my-auto px-3 lg:px-12  text-center relative w-full mt-12  lg:mx-auto lg:mt-24 border-l-4 border-r-4 border-green-600 py-3 lg:py-6 bg-gray-400 bg-opacity-25"
           >
             <h1 className="text-5xl lg:text-7xl ">Cennik</h1>
@@ -213,7 +209,7 @@ export default function OfferMobile() {
         </div>
       </div>
       <div
-        className={`text-white w-[80vw] fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-gradient-to-bl from-black to-zinc-800 lg:w-max h-max px-12 rounded-3xl py-6 duration-300 ${
+        className={`w-[80vw] fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-gradient-to-bl from-black to-zinc-800 lg:w-max h-max px-12 rounded-3xl py-6 duration-300 ${
           isContactOpen ? "z-[2000] opacity-100" : "z-[-1000] opacity-0"
         }`}
       >
@@ -242,11 +238,11 @@ export default function OfferMobile() {
             </div>
           </div>
           <div className="flex flex-col mt-2">
-            Treść wiadomości
+            Treść{" "}
             <textarea
               onChange={(e) => setMessage(e.target.value)}
               value={message}
-              className="h-full resize-none text-black mt-2"
+              className="h-full resize-none text-black"
             ></textarea>
           </div>
         </div>

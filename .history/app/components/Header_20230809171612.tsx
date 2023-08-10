@@ -40,8 +40,7 @@ export default function Header({
               <div>ul. Kościelna 15-17/7</div>
               <div>86-300 Grudziądz</div>
             </div>
-
-            <div className="hidden lg:flex flex-row items-center text-center justify-center text-2xl lg:text-4xl my-6">
+            <div className="hidden lg:flex flex-row items-center text-center justify-center text-2xl lg:text-4xl my-4">
               <FaPhone className="" />
               <a
                 className=" ml-1 text-center text-green-400"
@@ -49,20 +48,6 @@ export default function Header({
               >
                 +48502637727
               </a>
-            </div>
-            <div className="flex-row justify-center space-y-12 lg:items-end flex text-left space-x-5 lg:space-x-8">
-              <Link
-                href="/oferta"
-                className="text-2xl lg:text-2xl w-max expand caps"
-              >
-                Zakres usług
-              </Link>
-              <button
-                onClick={() => setContactOpen(true)}
-                className="text-2xl lg:text-2xl w-max expand caps"
-              >
-                Kontakt
-              </button>
             </div>
           </div>
         </div>
@@ -73,10 +58,7 @@ export default function Header({
           >
             Zakres usług
           </Link>
-          <button
-            onClick={() => setContactOpen(true)}
-            className="text-2xl lg:text-2xl w-max expand caps"
-          >
+          <button className="text-2xl lg:text-2xl w-max expand caps">
             Kontakt
           </button>
         </div>
@@ -100,10 +82,10 @@ export default function Header({
             <div className="hidden lg:flex flex-row items-center text-center justify-center text-2xl lg:text-4xl my-4">
               <FaPhone />
               <a
-                className="text-green-400 ml-1 text-center"
+                className="text-blue-400 ml-1 text-center"
                 href="tel:+48502637727"
               >
-                +48502637727
+                502637727
               </a>
             </div>
           </div>
@@ -125,8 +107,8 @@ export default function Header({
       </div>
       <div className="absolute bottom-24 w-full left-[50%] -translate-x-[50%] lg:hidden flex flex-row items-center justify-center text-2xl lg:text-4xl my-4">
         <FaPhone />
-        <a className="text-green-400 ml-2 text-center" href="tel:+48502637727">
-          +48502637727
+        <a className="text-blue-400 ml-2 text-center" href="tel:+48502637727">
+          502637727
         </a>
       </div>
       <div

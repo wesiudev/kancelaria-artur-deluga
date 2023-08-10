@@ -242,11 +242,11 @@ export default function OfferMobile() {
             </div>
           </div>
           <div className="flex flex-col mt-2">
-            Treść wiadomości
+            Treść{" "}
             <textarea
               onChange={(e) => setMessage(e.target.value)}
               value={message}
-              className="h-full resize-none text-black mt-2"
+              className="h-full resize-none text-black"
             ></textarea>
           </div>
         </div>
