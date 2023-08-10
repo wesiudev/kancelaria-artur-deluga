@@ -320,9 +320,7 @@ export default function OfferMobile() {
             </button>
             <button
               disabled={isSending}
-              onClick={() => {
-                onSubmit(), submitAnimation();
-              }}
+              onClick={(onSubmit, submitAnimation)}
               className="w-1/2 bg-purple-400 hover:bg-purple-300 duration-300 py-2 mt-8"
             >
               Wyślij

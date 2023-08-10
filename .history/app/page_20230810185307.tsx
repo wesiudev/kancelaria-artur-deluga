@@ -35,15 +35,6 @@ export default function Home() {
   const [isSent, setIsSent] = useState<boolean>(false);
 
   const onSubmit = async () => {
-    try {
-      await sendContactForm({
-        firstName: firstName,
-        email: email,
-        message: message,
-      });
-    } catch (error) {}
-  };
-  const submitAnimation = () => {
     setSending(true);
     setTimeout(() => {
       if (!isSent) {
@@ -53,6 +44,13 @@ export default function Home() {
     setTimeout(() => {
       setContactOpen(false);
     }, 3000);
+    try {
+      await sendContactForm({
+        firstName: firstName,
+        email: email,
+        message: message,
+      });
+    } catch (error) {}
   };
   return (
     <div

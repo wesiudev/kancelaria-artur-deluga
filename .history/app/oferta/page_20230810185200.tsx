@@ -38,17 +38,6 @@ export default function OfferMobile() {
       });
     } catch (error) {}
   };
-  const submitAnimation = () => {
-    setSending(true);
-    setTimeout(() => {
-      if (!isSent) {
-        setIsSent(true);
-      }
-    }, 2000);
-    setTimeout(() => {
-      setContactOpen(false);
-    }, 3000);
-  };
   return (
     <div className="w-full mx-auto z-[2000] bg-gradient-to-br from-zinc-800 via-zinc-500 to-zinc-800 overflow-x-hidden text-black">
       <Image
@@ -320,9 +309,7 @@ export default function OfferMobile() {
             </button>
             <button
               disabled={isSending}
-              onClick={() => {
-                onSubmit(), submitAnimation();
-              }}
+              onClick={onSubmit}
               className="w-1/2 bg-purple-400 hover:bg-purple-300 duration-300 py-2 mt-8"
             >
               Wyślij
