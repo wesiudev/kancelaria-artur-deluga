@@ -1,6 +1,7 @@
 "use client";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
+import Offer from "./components/Offer";
 import bg from "@/public/bg.jpg";
 import paragraphImage from "@/app/assets/paragraph.png";
 import Image from "next/image";
@@ -77,9 +78,7 @@ export default function Home() {
           />
         ) : (
           <div
-            className={`${
-              currentScroll < 200 ? "opacity-0" : "opacity-100"
-            } h-screen bg-gradient-to-b from-black via-zinc-800 to-black w-screen duration-1000`}
+            className={`h-screen bg-gradient-to-b from-black via-zinc-800 to-black w-screen `}
           ></div>
         )}
       </div>
@@ -277,7 +276,7 @@ export default function Home() {
                 <div className="flex flex-col h-max my-auto px-12 border-l border-r border-white  text-center relative w-[60vw]">
                   <div
                     ref={nodeRef}
-                    className="-right-6 absolute top-[50%] -translate-y-[50%] h-12 w-12 z-[2001]"
+                    className="-right-6 absolute top-[50%] -translate-y-[50%] h-12 w-12 bg-red-500 z-[2001]"
                   ></div>
                   <h1 className="text-7xl ">Cennik</h1>
                   <p className="mt-6 text-2xl">

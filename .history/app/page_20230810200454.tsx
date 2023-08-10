@@ -1,6 +1,7 @@
 "use client";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
+import Offer from "./components/Offer";
 import bg from "@/public/bg.jpg";
 import paragraphImage from "@/app/assets/paragraph.png";
 import Image from "next/image";
@@ -67,21 +68,13 @@ export default function Home() {
       className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white bg-white"
     >
       <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[101vh] w-[101vw] rounded-3xl">
-        {currentScroll < 200 ? (
-          <Image
-            width={1248}
-            height={1248}
-            src={bg}
-            alt="Obraz w tle Radca Prawny Artur Deluga. Image by FreePik."
-            className="w-full h-full blur-sm"
-          />
-        ) : (
-          <div
-            className={`${
-              currentScroll < 200 ? "opacity-0" : "opacity-100"
-            } h-screen bg-gradient-to-b from-black via-zinc-800 to-black w-screen duration-1000`}
-          ></div>
-        )}
+        <Image
+          width={1248}
+          height={1248}
+          src={bg}
+          alt="Obraz w tle Radca Prawny Artur Deluga. Image by FreePik."
+          className="w-full h-full blur-sm"
+        />
       </div>
       <div
         className={`text-white w-[80vw] fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-gradient-to-bl from-black to-zinc-800 lg:w-max h-max px-12 rounded-3xl py-6 duration-300 ${
@@ -275,10 +268,6 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col h-max my-auto px-12 border-l border-r border-white  text-center relative w-[60vw]">
-                  <div
-                    ref={nodeRef}
-                    className="-right-6 absolute top-[50%] -translate-y-[50%] h-12 w-12 z-[2001]"
-                  ></div>
                   <h1 className="text-7xl ">Cennik</h1>
                   <p className="mt-6 text-2xl">
                     Wynagrodzenie jest uzależnione m. in. od{" "}
@@ -299,6 +288,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div
+            ref={nodeRef}
+            className="-right-6 absolute top-[50%] -translate-y-[50%] h-12 w-12 bg-red-500 z-[2001]"
+          ></div>
         </div>
       </div>
     </div>

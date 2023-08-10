@@ -2,7 +2,9 @@
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa";
 import useWindowDimensions from "../hooks/useWindowDimensions";
-
+import { useIsVisible } from "react-is-visible";
+import "intersection-observer";
+import { useRef } from "react";
 export default function Header({
   marginLeft,
   setContactOpen,
@@ -11,12 +13,13 @@ export default function Header({
   setContactOpen: Function;
 }) {
   const { width } = useWindowDimensions();
-
+  const nodeRef = useRef<any>();
+  const isVisible = useIsVisible(nodeRef);
   return (
     <div
       className={`${
         marginLeft > 150 && width > 1024 && "hidden"
-      } h-max w-max mx-auto my-auto md:my-0 text-white z-[1500] select-none py-6 px-3 md:bg-black `}
+      } h-max w-max mx-auto my-auto md:my-0 text-white z-[1500] select-none py-6 px-3 md:bg-black`}
     >
       <div className="hidden lg:flex flex-col items-center absolute left-[50%]  top-[50%] -translate-y-[50%] lg:flex-row  lg:justify-between w-full  lg:fixed  lg:w-max">
         <div

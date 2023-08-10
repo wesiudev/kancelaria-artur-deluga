@@ -2,7 +2,9 @@
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa";
 import useWindowDimensions from "../hooks/useWindowDimensions";
-
+import { useIsVisible } from "react-is-visible";
+import "intersection-observer";
+import { useRef } from "react";
 export default function Header({
   marginLeft,
   setContactOpen,

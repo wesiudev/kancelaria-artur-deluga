@@ -2,7 +2,9 @@
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa";
 import useWindowDimensions from "../hooks/useWindowDimensions";
-
+import { useIsVisible } from "react-is-visible";
+import "intersection-observer";
+import { useRef, useState } from "react";
 export default function Header({
   marginLeft,
   setContactOpen,
@@ -11,7 +13,20 @@ export default function Header({
   setContactOpen: Function;
 }) {
   const { width } = useWindowDimensions();
-
+  const nodeRef = useRef<any>();
+  const isVisible = useIsVisible(nodeRef);
+  const [currentScroll, setCurrentScroll] = useState(0);
+  const handleScroll = (event: any) => {
+    const scrollAmount = event.deltaY;
+    if (scrollAmount === 100) {
+      if (!isVisible) {
+        setCurrentScroll(currentScroll + 25);
+      }
+    }
+    if (scrollAmount === -100 && currentScroll > 0) {
+      setCurrentScroll(currentScroll - 25);
+    }
+  };
   return (
     <div
       className={`${
