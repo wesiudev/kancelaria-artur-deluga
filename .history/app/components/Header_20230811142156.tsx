@@ -96,8 +96,8 @@ export default function Header({
               src={logo}
               className="w-1/2 sm:w-3/5 lg:w-full mx-auto"
             />
-            <div className="h-px w-1/2 bg-white my-6 mx-auto" />
-            <div className="flex-row justify-center lg:justify-end lg:items-end flex text-left space-x-5 lg:space-x-8 lg:hidden mt-6">
+            <div className="h-px w-1/2 bg-white my-6" />
+            <div className="flex-row justify-center lg:justify-end lg:items-end flex text-left space-x-5 lg:space-x-8 lg:hidden mt-12">
               <Link
                 href="/oferta"
                 className="text-2xl lg:text-2xl w-max expand "

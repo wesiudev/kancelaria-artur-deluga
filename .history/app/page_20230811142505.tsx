@@ -207,7 +207,7 @@ export default function Home() {
                     alt="Paragraf obrazek w tle"
                     width={666}
                     height={666}
-                    className="absolute opacity-10 w-[30vw]"
+                    className="absolute opacity-10"
                   />
                   <div className="flex flex-col justify-between w-max">
                     <h1 className="w-max text-4xl md:text-5xl lg:text-7xl  font-bold">
