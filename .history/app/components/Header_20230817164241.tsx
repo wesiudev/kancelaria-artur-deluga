@@ -55,7 +55,7 @@ export default function Header({
                 className=" ml-1 text-center text-green-400"
                 href="tel:+48502637727"
               >
-                +48 502 637 727
+                +48502637727
               </a>
             </div>
             <div className="flex-row justify-center space-y-12 lg:items-end flex text-left space-x-5 lg:space-x-8">
@@ -133,7 +133,7 @@ export default function Header({
                 className="text-green-400 ml-2 text-center"
                 href="tel:+48502637727"
               >
-                +48 502 637 727
+                +48502637727
               </a>
             </div>
             <div className="hidden lg:flex flex-row items-center text-center justify-center text-2xl lg:text-4xl my-4">

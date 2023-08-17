@@ -6,7 +6,7 @@ export async function POST(request) {
   const msg = {
     to: "arturdeluga86@gmail.com", // Change to your recipient
     from: "wesiudev@gmail.com", // Change to your verified sender
-    subject: "Nowa wiadomość od klienta - arturdeluga.pl",
+    subject: "Nowa wiadomość od klienta - kancelariadeluga.pl",
     text: `${message}`,
     html: `<!DOCTYPE html><html> <head> <title></title> <meta charset="utf-8"/> <meta name="viewport" content="width=device-width, initial-scale=1"/> <meta http-equiv="X-UA-Compatible" content="IE=edge"/> <style type="text/css">.wrapper{width:100%,height:100%;} .form-heading{width:100%;text-align:left; padding:3px; border-bottom:2px solid #c4c4c4;} h1{text-align:center; } </style> </head> <body style="">
     <div class="wrapper">

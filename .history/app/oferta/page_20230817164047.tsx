@@ -189,11 +189,11 @@ export default function OfferMobile() {
             </button>
           </div>
           <div
-            className={`bg-zinc-700 bg-opacity-50 rounded-full flex-col space-x-2 text-sm justify-center text-center items-center py-3 space-y-3 text-white mt-24 flex lg:hidden z-[1000]`}
+            className={`bg-gray-400 rounded-full flex-col space-x-2 text-sm justify-center text-center items-center py-3 space-y-3 mt-24 flex lg:hidden z-[1000]`}
           >
+            <div>arturdeluga86@gmail.com</div>
             <div>ul. Kościelna 15-17/7</div>
             <div>86-300 Grudziądz</div>
-            <div>arturdeluga86@gmail.com</div>
           </div>
           <Link
             href="/"

@@ -111,8 +111,12 @@ export default function OfferMobile() {
                 data-aos-delay="200"
                 className="text-left text-xl w-full lg:w-3/4 "
               >
-                Nasza kancelaria oferuje kompleksową pomoc prawną, dedykowaną{" "}
-                klientom indywidualnym, urzędom oraz podmiotom gospodarczym.
+                Nasza kancelaria oferuje{" "}
+                <span className="font-bold"> kompleksową pomoc prawną</span>,
+                dedykowaną{" "}
+                <span className="font-bold">klientom indywidualnym</span>,{" "}
+                <span className="font-bold">urzędom</span> oraz{" "}
+                <span className="font-bold">podmiotom gospodarczym</span>.
                 Specjalizujemy się przede wszystkim:
               </h2>
             </div>
@@ -126,8 +130,11 @@ export default function OfferMobile() {
               <h1 className="text-xl lg:text-3xl font-bold">Prawo Karne</h1>
               <p className="text-sm sm:text-xl mt-3 italic">
                 Pomoc prawna na każdym etapie postępowania karnego między
-                innymi: postępowanie przygotowawcze, obrona w postępowaniu
-                sądowym, reprezentacja pokrzywdzonego.
+                innymi:{" "}
+                <span className="font-bold">
+                  postępowanie przygotowawcze, obrona w postępowaniu sądowym,
+                  reprezentacja pokrzywdzonego.
+                </span>
               </p>
             </div>
             <div
@@ -139,8 +146,11 @@ export default function OfferMobile() {
                 Prawo gospodarcze
               </h1>
               <p className="text-sm sm:text-xl mt-3 italic">
-                Windykacja należności, sprawy o zapłatę, stała obsługa podmiotów
-                gospodarczych
+                Windykacja należności, sprawy o{" "}
+                <span className="font-bold">zapłatę</span>,{" "}
+                <span className="font-bold">
+                  stała obsługa podmiotów gospodarczych
+                </span>
               </p>
             </div>
 
@@ -151,8 +161,11 @@ export default function OfferMobile() {
             >
               <h1 className="text-xl lg:text-3xl font-bold">Prawo cywilne</h1>
               <p className="text-sm sm:text-xl mt-3 italic">
-                Sprawy o zapłatę, odszkodowanie i zadośćuczynienie, sprawy
-                spadkowe, sprawy z zakresu prawa rzeczowego
+                Sprawy o <span className="font-bold">zapłatę</span>,{" "}
+                <span className="font-bold">odszkodowanie</span> i{" "}
+                <span className="font-bold">zadośćuczynienie</span>,{" "}
+                <span className="font-bold">sprawy spadkowe</span>, sprawy z
+                zakresu prawa rzeczowego
               </p>
             </div>
             <div
@@ -162,8 +175,13 @@ export default function OfferMobile() {
             >
               <h1 className="text-xl lg:text-3xl font-bold">Prawo Rodzinne</h1>
               <p className="text-sm sm:text-xl mt-3 italic">
-                Sprawy o rozwód, alimenty, kontakty z dzieckiem, wykonywanie
-                władzy rodzicielskiej .
+                Sprawy o <span className="font-bold">rozwód</span>,{" "}
+                <span className="font-bold">alimenty</span>,{" "}
+                <span className="font-bold">kontakty z dzieckiem</span>,{" "}
+                <span className="font-bold">
+                  wykonywanie władzy rodzicielskiej
+                </span>
+                .
               </p>
             </div>
           </div>
@@ -174,12 +192,13 @@ export default function OfferMobile() {
           >
             <h1 className="text-5xl lg:text-7xl ">Cennik</h1>
             <p className="mt-6 text-base lg:text-2xl">
-              Wynagrodzenie jest uzależnione m. in. od nakładu pracy i{" "}
-              charakteru sprawy.
+              Wynagrodzenie jest uzależnione m. in. od{" "}
+              <span className="font-bold"> nakładu pracy</span> i{" "}
+              <span className="font-bold">charakteru sprawy</span>.
             </p>
             <p className="mt-3 text-sm lg:text-2xl">
-              W przypadku stałej obsługi wynagrodzenie w formie miesięcznego
-              ryczałtu.
+              W przypadku stałej obsługi wynagrodzenie w formie
+              <span className="font-bold"> miesięcznego ryczałtu</span>.
             </p>
             <button
               onClick={() => setContactOpen(true)}
@@ -189,11 +208,10 @@ export default function OfferMobile() {
             </button>
           </div>
           <div
-            className={`bg-zinc-700 bg-opacity-50 rounded-full flex-col space-x-2 text-sm justify-center text-center items-center py-3 space-y-3 text-white mt-24 flex lg:hidden z-[1000]`}
+            className={`bg-gray-400 rounded-full flex-row space-x-2 text-sm justify-center mt-24 flex lg:hidden z-[1000]`}
           >
             <div>ul. Kościelna 15-17/7</div>
             <div>86-300 Grudziądz</div>
-            <div>arturdeluga86@gmail.com</div>
           </div>
           <Link
             href="/"

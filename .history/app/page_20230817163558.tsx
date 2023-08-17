@@ -64,9 +64,9 @@ export default function Home() {
   return (
     <div
       onWheel={handleScroll}
-      className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white "
+      className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white bg-white"
     >
-      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[100vh] w-[100vw] rounded-3xl">
+      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[101vh] w-[101vw] rounded-3xl">
         {currentScroll < 200 ? (
           <Image
             width={1248}
@@ -210,7 +210,7 @@ export default function Home() {
                     className="absolute opacity-10 w-[30vw]"
                   />
                   <div className="flex flex-col justify-between w-max">
-                    <h1 className="w-max text-4xl md:text-5xl lg:text-7xl  font-bold text-white z-[2020] drop-shadow-lg shadow-black">
+                    <h1 className="w-max text-4xl md:text-5xl lg:text-7xl  font-bold text-zinc-700">
                       Oferowane usługi
                     </h1>
                     <div className="h-px w-full my-6 bg-white" />

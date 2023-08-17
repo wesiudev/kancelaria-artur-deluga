@@ -1,7 +1,7 @@
 "use client";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
-import bg from "@/public/bg.png";
+import bg from "@/public/bg.jpg";
 import paragraphImage from "@/app/assets/paragraph.png";
 import Image from "next/image";
 import { BsFillCheckCircleFill } from "react-icons/bs";
@@ -64,9 +64,9 @@ export default function Home() {
   return (
     <div
       onWheel={handleScroll}
-      className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white "
+      className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white bg-white"
     >
-      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[100vh] w-[100vw] rounded-3xl">
+      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[101vh] w-[101vw] rounded-3xl">
         {currentScroll < 200 ? (
           <Image
             width={1248}
@@ -79,7 +79,7 @@ export default function Home() {
           <div
             className={`${
               currentScroll < 200 ? "opacity-0" : "opacity-100"
-            } h-screen bg-gradient-to-b from-zinc-600 via-gray-600 to-zinc-600  w-screen duration-1000`}
+            } h-screen bg-gradient-to-b from-black via-zinc-800 to-black w-screen duration-1000`}
           ></div>
         )}
       </div>
@@ -197,7 +197,7 @@ export default function Home() {
                 currentScroll > 0 ? 100 - currentScroll : "75"
               }${currentScroll > 0 ? "vh" : "%"})`,
             }}
-            className={`hidden lg:block lg:min-w-[200vw] 2xl:min-w-[150vw]  h-screen bg-gradient-to-b from-zinc-600 via-gray-600 to-zinc-600 select-none pb-24 duration-500  fixed top-0 pr-[12vw]`}
+            className={`hidden lg:block lg:min-w-[200vw] 2xl:min-w-[150vw]  h-screen bg-gradient-to-b from-black via-zinc-800 to-black select-none pb-24 duration-500  fixed top-0 pr-[12vw]`}
           >
             <div className="w-full mx-auto">
               <div className="flex flex-row space-x-[100px]">
@@ -210,7 +210,7 @@ export default function Home() {
                     className="absolute opacity-10 w-[30vw]"
                   />
                   <div className="flex flex-col justify-between w-max">
-                    <h1 className="w-max text-4xl md:text-5xl lg:text-7xl  font-bold text-white z-[2020] drop-shadow-lg shadow-black">
+                    <h1 className="w-max text-4xl md:text-5xl lg:text-7xl  font-bold">
                       Oferowane usługi
                     </h1>
                     <div className="h-px w-full my-6 bg-white" />
@@ -218,40 +218,55 @@ export default function Home() {
                   <h2 className="text-left text-xl w-full lg:w-3/4 ">
                     Nasza kancelaria oferuje kompleksową pomoc prawną ,
                     dedykowaną klientom indywidualnym, urzędom oraz podmiotom
-                    gospodarczym. Specjalizujemy się przede wszystkim:
+                    gospodarczym. Specjalizujemy się w następującym zakresie
+                    dziedzin prawa:
                   </h2>
                 </div>
                 <div className="relative text-black flex flex-row space-x-12 mr-24">
                   <div className="flex flex-col justify-center space-y-6 w-[60vw]">
-                    <div className="h-[25vh] border-0 hover:scale-105 duration-300 hover:bg-opacity-100 cursor-default p-6 rounded-md  bg-white bg-opacity-75 flex flex-col ">
+                    <div className="h-[25vh] border-0 hover:scale-110 duration-300 hover:bg-opacity-100 cursor-default px-3 md:border-l-2 md:border-t-2 border-black bg-white bg-opacity-75 flex flex-col py-3">
                       <h1 className="text-3xl font-bold">Prawo Karne</h1>
                       <p className="text-xl mt-3 italic">
                         Pomoc prawna na każdym etapie postępowania karnego
-                        między innymi: postępowanie przygotowawcze, obrona w
-                        postępowaniu sądowym, reprezentacja pokrzywdzonego.
+                        między innymi:{" "}
+                        <span className="font-bold">
+                          postępowanie przygotowawcze, obrona w postępowaniu
+                          sądowym, reprezentacja pokrzywdzonego.
+                        </span>
                       </p>
                     </div>
-                    <div className="h-[25vh] border-0 hover:scale-105 duration-300 hover:bg-opacity-100 cursor-default p-6 rounded-md   bg-white bg-opacity-75 flex flex-col ">
+                    <div className="h-[25vh] border-0 hover:scale-110 duration-300 hover:bg-opacity-100 cursor-default px-3 md:border-l-2 md:border-b-2 border-black bg-white bg-opacity-75 flex flex-col py-3">
                       <h1 className="text-3xl font-bold">Prawo gospodarcze</h1>
                       <p className="text-xl mt-3 italic">
-                        Windykacja należności, sprawy o zapłatę, stała obsługa
-                        podmiotów gospodarczych
+                        Windykacja należności, sprawy o{" "}
+                        <span className="font-bold">zapłatę</span>,{" "}
+                        <span className="font-bold">
+                          stała obsługa podmiotów gospodarczych
+                        </span>
                       </p>
                     </div>
                   </div>
                   <div className="flex flex-col justify-center space-y-6 w-[60vw]">
-                    <div className="h-[25vh] border-0 hover:scale-105 duration-300 hover:bg-opacity-100 cursor-default p-6 rounded-md   bg-white bg-opacity-75 flex flex-col ">
+                    <div className="h-[25vh] border-0 hover:scale-110 duration-300 hover:bg-opacity-100 cursor-default px-3 md:border-t-2 md:border-r-2 border-black bg-white bg-opacity-75 flex flex-col py-3">
                       <h1 className="text-3xl font-bold">Prawo cywilne</h1>
                       <p className="text-xl mt-3 italic">
-                        Sprawy o zapłatę, odszkodowanie i zadośćuczynienie,{" "}
-                        sprawy spadkowe, sprawy z zakresu prawa rzeczowego
+                        Sprawy o <span className="font-bold">zapłatę</span>,{" "}
+                        <span className="font-bold">odszkodowanie</span> i{" "}
+                        <span className="font-bold">zadośćuczynienie</span>,{" "}
+                        <span className="font-bold">sprawy spadkowe</span>,
+                        sprawy z zakresu prawa rzeczowego
                       </p>
                     </div>
-                    <div className="h-[25vh] border-0 hover:scale-105 duration-300 hover:bg-opacity-100 cursor-default p-6 rounded-md  bg-white bg-opacity-75 flex flex-col ">
+                    <div className="h-[25vh] border-0 hover:scale-110 duration-300 hover:bg-opacity-100 cursor-default px-3 md:border-r-2 md:border-b-2 border-black bg-white bg-opacity-75 flex flex-col py-3">
                       <h1 className="text-3xl font-bold">Prawo Rodzinne</h1>
                       <p className="text-xl mt-3 italic">
-                        Sprawy o rozwód, alimenty, kontakty z dzieckiem,{" "}
-                        wykonywanie władzy rodzicielskiej .
+                        Sprawy o <span className="font-bold">rozwód</span>,{" "}
+                        <span className="font-bold">alimenty</span>,{" "}
+                        <span className="font-bold">kontakty z dzieckiem</span>,{" "}
+                        <span className="font-bold">
+                          wykonywanie władzy rodzicielskiej
+                        </span>
+                        .
                       </p>
                     </div>
                   </div>
@@ -263,16 +278,17 @@ export default function Home() {
                   ></div>
                   <h1 className="text-7xl ">Cennik</h1>
                   <p className="mt-6 text-2xl">
-                    Wynagrodzenie jest uzależnione m. in. od nakładu pracy i{" "}
-                    charakteru sprawy.
+                    Wynagrodzenie jest uzależnione m. in. od{" "}
+                    <span className="font-bold"> nakładu pracy</span> i{" "}
+                    <span className="font-bold">charakteru sprawy</span>.
                   </p>
                   <p className="mt-3 text-2xl">
                     W przypadku stałej obsługi wynagrodzenie w formie
-                    miesięcznego ryczałtu.
+                    <span className="font-bold"> miesięcznego ryczałtu</span>.
                   </p>
                   <button
                     onClick={() => setContactOpen(true)}
-                    className=" p-6 py-3 rounded-lg text-white bg-purple-400 hover:bg-purple-300 duration-300 font-bold mt-12 w-max mx-auto"
+                    className=" p-3 bg-purple-400 hover:bg-purple-300 duration-300 text-black mt-12 w-max mx-auto"
                   >
                     Wypełnij formularz
                   </button>

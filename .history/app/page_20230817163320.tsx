@@ -64,9 +64,9 @@ export default function Home() {
   return (
     <div
       onWheel={handleScroll}
-      className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white "
+      className="absolute left-[0] top-0 w-screen h-screen z-[1500] overflow-hidden text-white bg-white"
     >
-      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[100vh] w-[100vw] rounded-3xl">
+      <div className="fixed left-[50%] -translate-x-[50%] top-[50%] -translate-y-[50%] bg-black h-[101vh] w-[101vw] rounded-3xl">
         {currentScroll < 200 ? (
           <Image
             width={1248}
@@ -79,7 +79,7 @@ export default function Home() {
           <div
             className={`${
               currentScroll < 200 ? "opacity-0" : "opacity-100"
-            } h-screen bg-gradient-to-b from-zinc-600 via-gray-600 to-zinc-600  w-screen duration-1000`}
+            } h-screen bg-gradient-to-b from-purple-700 via-gray-700 to-zinc-700 w-screen duration-1000`}
           ></div>
         )}
       </div>
@@ -197,7 +197,7 @@ export default function Home() {
                 currentScroll > 0 ? 100 - currentScroll : "75"
               }${currentScroll > 0 ? "vh" : "%"})`,
             }}
-            className={`hidden lg:block lg:min-w-[200vw] 2xl:min-w-[150vw]  h-screen bg-gradient-to-b from-zinc-600 via-gray-600 to-zinc-600 select-none pb-24 duration-500  fixed top-0 pr-[12vw]`}
+            className={`hidden lg:block lg:min-w-[200vw] 2xl:min-w-[150vw]  h-screen bg-gradient-to-b from-zinc-700 via-gray-700 to-zinc-700 select-none pb-24 duration-500  fixed top-0 pr-[12vw]`}
           >
             <div className="w-full mx-auto">
               <div className="flex flex-row space-x-[100px]">
@@ -210,7 +210,7 @@ export default function Home() {
                     className="absolute opacity-10 w-[30vw]"
                   />
                   <div className="flex flex-col justify-between w-max">
-                    <h1 className="w-max text-4xl md:text-5xl lg:text-7xl  font-bold text-white z-[2020] drop-shadow-lg shadow-black">
+                    <h1 className="w-max text-4xl md:text-5xl lg:text-7xl  font-bold">
                       Oferowane usługi
                     </h1>
                     <div className="h-px w-full my-6 bg-white" />
@@ -272,7 +272,7 @@ export default function Home() {
                   </p>
                   <button
                     onClick={() => setContactOpen(true)}
-                    className=" p-6 py-3 rounded-lg text-white bg-purple-400 hover:bg-purple-300 duration-300 font-bold mt-12 w-max mx-auto"
+                    className=" p-3 bg-purple-400 hover:bg-purple-300 duration-300 text-black mt-12 w-max mx-auto"
                   >
                     Wypełnij formularz
                   </button>
