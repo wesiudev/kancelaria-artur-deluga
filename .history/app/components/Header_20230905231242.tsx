@@ -38,7 +38,6 @@ export default function Header({
             />
 
             <div className="w-max flex flex-col mx-auto">
-              <div className="h-px w-full bg-white my-6" />
               <Link
                 href="https://www.google.pl/maps/place/Ko%C5%9Bcielna+15%2F17,+86-300+Grudzi%C4%85dz/@53.4936317,18.7491282,21z/data=!4m6!3m5!1s0x4702cfe9d55ebce9:0x9f5b2defb2cf16f8!8m2!3d53.4936379!4d18.7492069!16s%2Fg%2F11nnscf_vb?entry=ttu"
                 target="_blank"
@@ -100,9 +99,9 @@ export default function Header({
               height={666}
               alt="Kancelaria Radcy Prawnego Artur Deluga Zdjęcie"
               src={logo}
-              className="w-[40%] sm:w-3/5 lg:w-full mx-auto"
+              className="w-1/2 sm:w-3/5 lg:w-full mx-auto"
             />
-            <div className="h-px w-1/4 bg-white my-6 mx-auto" />
+            <div className="h-px w-1/2 bg-white my-6 mx-auto" />
             <div className="flex-row justify-center lg:justify-end lg:items-end flex text-left space-x-5 lg:space-x-8 lg:hidden mt-6">
               <Link
                 href="/oferta"
@@ -125,7 +124,6 @@ export default function Header({
               <div>ul. Kościelna 15-17/7</div>
               <div>86-300 Grudziądz</div>
             </Link>
-
             <Link
               href="https://www.google.pl/maps/place/Ko%C5%9Bcielna+15%2F17,+86-300+Grudzi%C4%85dz/@53.4936317,18.7491282,21z/data=!4m6!3m5!1s0x4702cfe9d55ebce9:0x9f5b2defb2cf16f8!8m2!3d53.4936379!4d18.7492069!16s%2Fg%2F11nnscf_vb?entry=ttu"
               target="_blank"
@@ -133,12 +131,6 @@ export default function Header({
             >
               <div>ul. Kościelna 15-17/7</div>
               <div>86-300 Grudziądz</div>
-            </Link>
-            <Link
-              className="text-xl mt-3 flex flex-row items-center justify-center"
-              href="mailto:arturdeluga86@gmail.com"
-            >
-              <FaEnvelope className="mr-2 text-xl" /> arturdeluga86@gmail.com
             </Link>
             <div className="lg:hidden flex flex-row items-center justify-center text-2xl lg:text-4xl my-6">
               <FaPhone />
